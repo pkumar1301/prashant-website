@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Predictability in AI: The &quot;Trust Gap&quot; We Must Close | Prashant Kumar</title>
+  <meta name="description" content="Having worked in Product Management for regulated domains such as Healthcare, Public Administration, Defense, and Finance, one of the hardest questions I face today when discussing AI integration is simple but fundamental: How can we trust the answer of an AI system?">
+  <link rel="canonical" href="https://www.pkumarpmleader.com/articles/predictability-in-ai-the-trust-gap.html">
+  <meta name="theme-color" content="#eeeff4">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.pkumarpmleader.com/articles/predictability-in-ai-the-trust-gap.html">
+  <meta property="og:title" content="Predictability in AI: The &quot;Trust Gap&quot; We Must Close">
+  <meta property="og:description" content="Having worked in Product Management for regulated domains such as Healthcare, Public Administration, Defense, and Finance, one of the hardest questions I face today when discussing AI integration is simple but fundamental: How can we trust the answer of an AI system?">
+  <meta property="og:image" content="https://www.pkumarpmleader.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/articles/articles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Predictability in AI: The \"Trust Gap\" We Must Close",
+    "datePublished": "2025-12-17",
+    "description": "Having worked in Product Management for regulated domains such as Healthcare, Public Administration, Defense, and Finance, one of the hardest questions I face today when discussing AI integration is simple but fundamental: How can we trust the answer of an AI system?",
+    "url": "https://www.pkumarpmleader.com/articles/predictability-in-ai-the-trust-gap.html",
+    "mainEntityOfPage": "https://www.pkumarpmleader.com/articles/predictability-in-ai-the-trust-gap.html",
+    "author": {
+      "@type": "Person",
+      "name": "Prashant Kumar",
+      "url": "https://www.pkumarpmleader.com/"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Prashant Kumar"
+    },
+    "image": "https://www.pkumarpmleader.com/assets/og-image.jpg"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="page-head">
+    <div class="page-head-inner">
+      <a class="page-mark" href="/" aria-label="Prashant Kumar, home">PK</a>
+      <nav aria-label="Sections">
+        <a href="/">Home</a>
+        <a href="/articles/">Articles</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page">
+    <article class="article">
+      <p class="kicker">Applied AI</p>
+      <h1 class="article-title">Predictability in AI: The &quot;Trust Gap&quot; We Must Close</h1>
+      <p class="article-meta">Prashant Kumar &middot; December 17, 2025</p>
+
+      <div class="article-body">
+        <p>Having worked in Product Management for regulated domains such as Healthcare, Public Administration, Defense, and Finance, one of the hardest questions I face today when discussing AI integration is simple but fundamental:</p>
+        <p>How can we trust the answer of an AI system?</p>
+        <p>This question goes beyond the well-known issue of LLM hallucinations. It exposes a deeper trust problem:</p>
+        <p>How do you trust a system that can give different answers to the same question, and whose reasoning cannot be clearly explained?</p>
+        <h2>The Core Problem: Non-Determinism</h2>
+        <p>Today's LLMs are non-deterministic by nature. They generate text via probabilistic token prediction. While this randomness makes them creative and great for marketing copy, it makes them dangerous for high-stakes decisions.</p>
+        <ul>
+          <li>A doctor using Clinical Decision Support needs certainty, not "creative" diagnostics.</li>
+          <li>A bank checking KYC compliance needs auditability, not a "probably correct" guess.</li>
+        </ul>
+        <p>Without a fixed set of rules, you cannot guarantee the outcome. And if you can't guarantee the outcome, you cannot take responsibility for it.</p>
+        <h2>The Solution: Engineered Determinism</h2>
+        <p>This is why I am closely following Mira Murati's new venture, <a href="https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/">Thinking Machines Lab</a>. They are moving from "Black Box" magic to "White Box" engineering.</p>
+        <p>Crucially, they are tackling the technical root causes of unpredictability, such as Batch Invariance, to ensure that the same input produces the bit-identical output every single time, regardless of hardware noise.</p>
+        <p>Product perspective: It addresses three critical gaps in today's AI systems:</p>
+        <ul>
+          <li>Predictable outcomes</li>
+          <li>Explainable decisions</li>
+          <li>Clear ownership when things go wrong</li>
+        </ul>
+        <h2>Why This Matters for Product Strategy</h2>
+        <p>As a Product Leader, this shift solves three massive pain points:</p>
+        <ol>
+          <li>Regulated Compliance: You cannot comply with the EU AI Act if your model is a random number generator. Determinism allows valid testing.</li>
+          <li>Debugging &amp; Quality: If a bug isn't reproducible, it isn't fixable. Determinism protects multi-million Euro revenue streams by allowing us to guarantee system behavior.</li>
+          <li>AGI vs utility: The next enterprise arms race is not only about intelligence. It is about speed versus determinism. In many cases, a reliable and predictable AI is far more valuable than a brilliant but random one.</li>
+        </ol>
+        <p>The move from "black-box magic" to engineered, deterministic AI is one of the defining trends for enterprise Product Management today.</p>
+        <p>If you could guarantee bit-identical, predictable output from your LLM product every time, what is the first major compliance bottleneck you would solve?</p>
+      </div>
+
+      <p class="article-source">First published on <a href="https://www.linkedin.com/pulse/predictability-ai-trust-gap-we-must-close-prashant-kumar-ugene/" rel="noopener">LinkedIn</a>.</p>
+    </article>
+
+    <p class="article-back"><a href="/articles/">All articles</a></p>
+  </main>
+
+  <footer class="footer">
+    <p>Prashant Kumar, 2026</p>
+  </footer>
+</body>
+</html>

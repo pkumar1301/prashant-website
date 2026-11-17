@@ -1,0 +1,22 @@
+# Amplify Hosting response headers. Amplify reads this file from the repo root.
+customHeaders:
+  - pattern: '**/*'
+    headers:
+      - key: Strict-Transport-Security
+        value: max-age=31536000; includeSubDomains
+      - key: X-Content-Type-Options
+        value: nosniff
+      - key: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - key: X-Frame-Options
+        value: SAMEORIGIN
+  - pattern: '/prashant-kumar.vcf'
+    headers:
+      - key: Content-Type
+        value: text/vcard; charset=utf-8
+      - key: Content-Disposition
+        value: attachment; filename="prashant-kumar.vcf"
+  - pattern: '/assets/**/*'
+    headers:
+      - key: Cache-Control
+        value: public, max-age=604800

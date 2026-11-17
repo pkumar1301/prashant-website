@@ -1,0 +1,203 @@
+/* Articles section. Loaded after /styles.css, which supplies the tokens, the
+   base type and the footer. Nothing is redefined here: the section borrows the
+   home page's paper, navy ink, cobalt links and Newsreader/IBM Plex pairing, so
+   an article reads as the same site with the cover taken off. */
+
+/* ---------- slim head, standing in for the cover ---------- */
+
+.page-head {
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.page-head-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding: calc(18px + env(safe-area-inset-top, 0px)) var(--gutter) 18px;
+}
+
+.page-mark {
+  font: 400 22px/1 var(--serif);
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.page-head nav {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+}
+
+.page-head nav a {
+  color: var(--ink-2);
+  text-decoration: none;
+}
+
+.page-head nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
+.page-head nav a[aria-current="page"] { color: var(--ink); }
+
+/* ---------- shared page frame ---------- */
+
+.page {
+  max-width: 1320px;
+  margin-inline: auto;
+  padding: clamp(56px, 8vw, 104px) var(--gutter) clamp(72px, 10vw, 128px);
+}
+
+.kicker {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+/* ---------- index: the list of articles ---------- */
+
+.section-title {
+  font: 300 clamp(34px, 4.2vw, 60px)/1.06 var(--serif);
+  letter-spacing: -0.02em;
+  margin-top: 10px;
+  max-width: 16ch;
+}
+
+.section-lede {
+  margin-top: 20px;
+  max-width: var(--measure);
+  color: var(--ink-2);
+}
+
+.listing {
+  margin-top: clamp(40px, 6vw, 72px);
+  border-top: 1px solid var(--rule);
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 8px clamp(24px, 4vw, 56px);
+  padding: clamp(26px, 3.5vw, 40px) 0;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+}
+
+.entry-meta {
+  font-size: 13px;
+  color: var(--ink-3);
+  padding-top: 7px;
+}
+
+.entry-title {
+  font: 400 clamp(21px, 2.1vw, 28px)/1.22 var(--serif);
+  letter-spacing: -0.008em;
+}
+
+.entry-summary {
+  grid-column: 2;
+  margin-top: 10px;
+  max-width: var(--measure);
+  color: var(--ink-2);
+  font-size: 15px;
+}
+
+.entry:hover .entry-title { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+/* ---------- the article itself ---------- */
+
+.article { max-width: 46rem; }
+
+.article-title {
+  font: 300 clamp(30px, 3.6vw, 50px)/1.08 var(--serif);
+  letter-spacing: -0.018em;
+  margin-top: 10px;
+}
+
+.article-meta {
+  margin-top: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+/* the body is the one place the serif carries running text, at a size meant
+   for reading rather than for display */
+.article-body {
+  margin-top: clamp(28px, 4vw, 44px);
+  font: 400 clamp(17px, 1.35vw, 19px)/1.66 var(--serif);
+  color: var(--ink);
+}
+
+.article-body > * + * { margin-top: 1.15em; }
+.article-body p { max-width: var(--measure); }
+
+.article-body h2 {
+  font: 400 clamp(23px, 2.2vw, 30px)/1.2 var(--serif);
+  letter-spacing: -0.012em;
+  margin-top: 2.2em;
+}
+
+.article-body h3 {
+  font: 500 16px/1.35 var(--sans);
+  letter-spacing: 0.01em;
+  margin-top: 1.9em;
+}
+
+.article-body a { color: var(--cobalt); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+.article-body ul,
+.article-body ol {
+  max-width: var(--measure);
+  padding-left: 1.3em;
+  margin-block: 1.15em;
+}
+
+.article-body li + li { margin-top: 0.5em; }
+.article-body li::marker { color: var(--ink-3); }
+
+.article-body blockquote {
+  margin: 1.8em 0;
+  padding-left: clamp(18px, 2.5vw, 28px);
+  border-left: 2px solid var(--cobalt);
+  max-width: var(--measure);
+  font-size: 1.05em;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+
+.article-body blockquote p { margin: 0; }
+.article-body strong { font-weight: 600; }
+.article-body u { text-decoration: none; }
+
+.article-source {
+  margin-top: clamp(44px, 6vw, 72px);
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink-3);
+}
+
+.article-source a { color: var(--cobalt); }
+
+.article-back {
+  margin-top: 28px;
+  font-size: 14px;
+}
+
+.article-back a { color: var(--cobalt); text-decoration: none; }
+.article-back a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 760px) {
+  .entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .entry-meta { padding-top: 0; }
+  .entry-summary { grid-column: 1; }
+}

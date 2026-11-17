@@ -1,0 +1,14 @@
+# Static site: no build step. Amplify publishes the files under public/ as they are.
+# The domain (pkumarpmleader.com and www) and the apex -> www redirect are set in the
+# Amplify Console, see README.md.
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - rm -rf public && mkdir public
+        - cp -R index.html styles.css main.js favicon.svg robots.txt sitemap.xml prashant-kumar.vcf 404.html assets articles public/
+  artifacts:
+    baseDirectory: public
+    files:
+      - '**/*'
